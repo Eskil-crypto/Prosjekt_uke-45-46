@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101913">
+  <title>Zombie Shotgun Apocalypse</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Zombie Shotgun Apocalypse hjem">
+        <span class="brand-mark">☣</span>
+        <span><strong>ZOMBIE</strong><small>SHOTGUN APOCALYPSE</small></span>
+      </a>
+      <div class="topbar-right"><span class="status-dot"></span><span>OVERLEVELSESMODUS</span></div>
+    </header>
+
+    <section class="game-layout" aria-label="Spill">
+      <div class="game-column">
+        <div class="game-heading">
+          <div>
+            <p class="eyebrow">SISTE TRYGGHETSSONE</p>
+            <h1>Hold deg i live.</h1>
+          </div>
+          <div class="wave-chip"><span>BØLGE</span><strong id="waveValue">1</strong></div>
+        </div>
+
+        <div class="canvas-frame">
+          <canvas id="gameCanvas" width="1280" height="720" aria-label="Zombie shooter spillflate"></canvas>
+          <div class="screen-overlay" id="menuOverlay">
+            <div class="overlay-card title-card">
+              <div class="warning-icon">☣</div>
+              <p class="eyebrow">ETTER UTBRUDDET</p>
+              <h2>IKKE BLI<br><span>BITT.</span></h2>
+              <p class="overlay-copy">Hold zombiene unna. Samle poeng. Overlev så lenge du klarer.</p>
+              <button class="primary-button" id="startButton">START SPILLET <span>→</span></button>
+              <p class="tiny-note">WASD for å bevege deg · Mus for å sikte</p>
+            </div>
+          </div>
+          <div class="screen-overlay hidden" id="pauseOverlay">
+            <div class="overlay-card compact-card">
+              <p class="eyebrow">PAUSE</p>
+              <h2>Ta en pust.</h2>
+              <p class="overlay-copy">Zombiene venter ikke for alltid.</p><button class="primary-button"
+                id="resumeButton">FORTSETT <span>→</span></button>
+            </div>
+          </div>
+          <div class="screen-overlay hidden" id="gameOverOverlay">
+            <div class="overlay-card compact-card">
+              <p class="eyebrow danger-text">DU BLE OVERRUNNET</p>
+              <h2>Game over.</h2>
+              <p class="overlay-copy">Du overlevde til bølge <strong id="finalWave">1</strong>.</p>
+              <div class="result-line"><span>POENG</span><strong id="finalScore">0</strong></div><button
+                class="primary-button" id="restartButton">PRØV IGJEN <span>↻</span></button>
+            </div>
+          </div>
+          <div class="pause-hint">ESC <span>PAUSE</span></div>
+        </div>
+
+        <div class="hud-row">
+          <div class="hud-card health-card">
+            <div class="hud-label"><span class="hud-icon heart">♥</span><span>HELSE</span><strong
+                id="healthText">100%</strong></div>
+            <div class="meter">
+              <div id="healthBar" class="meter-fill health-fill"></div>
+            </div>
+          </div>
+          <div class="hud-card ammo-card">
+            <div class="hud-label"><span class="hud-icon">▰</span><span>HAGLEAMMO</span><strong id="ammoText">6 /
+                6</strong></div>
+            <div class="ammo-pips" id="ammoPips"></div>
+          </div>
+          <div class="hud-card score-card">
+            <div class="hud-label"><span class="hud-icon star">✦</span><span>POENG</span></div><strong class="big-stat"
+              id="scoreValue">0000</strong>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side-panel">
+        <section class="panel-section objective-panel">
+          <p class="eyebrow">OPPDRAG</p>
+          <h2>Overlev natten</h2>
+          <p>Hver bølge bringer flere og raskere zombier. Ikke la dem komme nær nok til å angripe.</p>
+          <div class="objective-stat"><span>BESTE POENGSUM</span><strong id="bestScore">0</strong></div>
+          <div class="objective-stat"><span>ZOMBIER NEDKJEMPET</span><strong id="killsValue">0</strong></div>
+        </section>
+        <section class="panel-section controls-panel">
+          <p class="eyebrow">KONTROLLER</p>
+          <div class="control-row"><span class="keycap">W</span><span class="keycap">A</span><span
+              class="keycap">S</span><span class="keycap">D</span><span class="control-description">Beveg deg</span>
+          </div>
+          <div class="control-row"><span class="keycap wide">MUS</span><span class="control-description">Sikt med
+              pekeren</span></div>
+          <div class="control-row"><span class="keycap wide">KLIKK</span><span class="control-description">Skyt
+              hagla</span></div>
+          <div class="control-row"><span class="keycap">R</span><span class="control-description">Lad om</span></div>
+          <div class="control-row"><span class="keycap">ESC</span><span class="control-description">Pause /
+              fortsett</span></div>
+        </section>
+        <div class="tip-box"><span class="tip-icon">✦</span>
+          <div><strong>OVERLEVELSESTIPS</strong>
+            <p>Fortsett å bevege deg. Et stillestående mål er et lett mål.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+    <footer><span>© ZOMBIE SHOTGUN APOCALYPSE</span><span>BYGGET FOR Å OVERLEVE <b>•</b> V. 2.0</span></footer>
+  </main>
+</body>
+
+</html>

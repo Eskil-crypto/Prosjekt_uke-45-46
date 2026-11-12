@@ -1,0 +1,31 @@
+ZOMBIE SHOTGUN APOCALYPSE — VERSJON 2.0
+
+SLIK STARTER DU SPILLET
+1. Pakk ut ZIP-filen.
+2. Åpne mappen «Javascript Zombie Shooter» i Visual Studio Code.
+3. Pass på at mappen «images» ligger ved siden av index.html, style.css og script.js.
+4. Åpne index.html i nettleseren. Anbefalt: bruk utvidelsen Live Server i VS Code og velg «Open with Live Server».
+
+FILER DU KAN ERSTATTE
+- index.html: ny spillmeny, HUD og kontrollpanel.
+- style.css: nytt responsivt design.
+- script.js: oppdatert spillmotor, bevegelse, skyting, zombier, bølger, helse, omlading, pause og highscore.
+
+KONTROLLER
+- W/A/S/D eller piltastene: beveg deg
+- Mus: sikt
+- Venstre museknapp: skyt (hagla skyter tre pellets)
+- R: lad om
+- ESC: pause / fortsett
+- Enter: start eller prøv igjen fra menyen/Game Over
+
+SPILLFUNKSJONER
+- Bølger som blir vanskeligere etter hvert som du nedkjemper zombier
+- Helsemåler og skade fra zombier
+- Haglemagasin med 6 skudd og omlading
+- Vanlige og sterkere zombier
+- Treffpartikler, skuddglimt, sikte og skjermristing
+- Poeng, antall nedkjempede zombier og lokal highscore
+- Startmeny, pausemeny og Game Over-skjerm
+
+Merk: Google Fonts lastes fra nettet hvis internett er tilgjengelig. Spillet og de lokale bildene ligger i prosjektmappen.
